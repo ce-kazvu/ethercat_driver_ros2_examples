@@ -14,21 +14,38 @@ controller_manager:
     effort_controller:
       type: effort_controllers/JointGroupEffortController
 
+    drive_controller:
+      type: ethercat_controllers/CiA402Controller
+
 trajectory_controller:
   ros__parameters:
     command_interfaces:
-      - position
+      - velocity
     state_interfaces:
       - position
+      - velocity
     joints:
       - joint_1
 
 velocity_controller:
   ros__parameters:
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - velocity
     joints:
       - joint_1
 
 effort_controller:
+  ros__parameters:
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - effort
+    joints:
+      - joint_1
+
+drive_controller:
   ros__parameters:
     joints:
       - joint_1

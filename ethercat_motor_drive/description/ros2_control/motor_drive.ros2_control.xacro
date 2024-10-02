@@ -24,7 +24,7 @@
           <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
           <param name="alias">0</param>
           <param name="position">0</param>
-          <param name="mode_of_operation">8</param>
+          <param name="mode_of_operation">3</param>
           <param name="slave_config">$(find ethercat_motor_drive)/config/circulo_config.yaml</param>
         </ec_module>
       </joint>

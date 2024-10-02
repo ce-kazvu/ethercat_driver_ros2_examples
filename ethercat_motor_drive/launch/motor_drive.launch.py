@@ -77,11 +77,11 @@ def generate_launch_description():
         arguments=["joint_state_broadcaster", "-c", "/controller_manager"],
     )
 
-    trajectory_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["trajectory_controller", "-c", "/controller_manager"],
-    )
+    #trajectory_controller_spawner = Node(
+    #    package="controller_manager",
+    #    executable="spawner",
+    #    arguments=["trajectory_controller", "-c", "/controller_manager"],
+    #)
 
     velocity_controller_spawner = Node(
          package="controller_manager",
@@ -104,8 +104,8 @@ def generate_launch_description():
         control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
-        trajectory_controller_spawner,
-        #velocity_controller_spawner,
+        #trajectory_controller_spawner,
+        velocity_controller_spawner,
         #drive_controller_spawner,
         #effort_controller_spawner,
     ]
