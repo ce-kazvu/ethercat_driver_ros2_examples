@@ -11,11 +11,11 @@ rpdo: # RxPDO
     channels:
       - { index: 0x6040, sub_index: 0, type: uint16, command_interface: controlword, default: 0}  # Control Word
       - { index: 0x6060, sub_index: 0, type: int8, command_interface: modeOfOperation, default: 8}  # Mode of Operation
-      - { index: 0x6071, sub_index: 0, type: int16, default: 0 } # Target Torque
+      - { index: 0x6071, sub_index: 0, type: int16, default: .nan } # Target Torque
       - { index: 0x607a, sub_index: 0, type: int32, command_interface: position, default: .nan, } # Target Position
-      - { index: 0x60ff, sub_index: 0, type: int32, default: 0 } # Target Velocity
-      - { index: 0x60b2, sub_index: 0, type: int16, default: 0 } # Torque Offset
-      - { index: 0x2701, sub_index: 0, type: int32, default: 0 } # Tuning Command
+      - { index: 0x60ff, sub_index: 0, type: int32, default: .nan } # Target Velocity
+      - { index: 0x60b2, sub_index: 0, type: int16, default: .nan } # Torque Offset
+      - { index: 0x2701, sub_index: 0, type: int32, default: .nan } # Tuning Command
   - index: 0x1601 # Receive PDO2 Mapping
     channels:
       - { index: 0x60fe, sub_index: 1, type: uint16, default: 0 } # Physical Outputs
