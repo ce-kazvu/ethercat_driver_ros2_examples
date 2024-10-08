@@ -20,12 +20,13 @@ controller_manager:
 trajectory_controller:
   ros__parameters:
     command_interfaces:
+      - position
       - velocity
     state_interfaces:
       - position
       - velocity
     joints:
-      - joint_1
+      - 'joint_1'
 
 velocity_controller:
   ros__parameters:
@@ -49,3 +50,4 @@ drive_controller:
   ros__parameters:
     joints:
       - joint_1
+    dofs: [joint_1]
